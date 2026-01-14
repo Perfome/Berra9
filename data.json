@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "title": "Ahmet'ten Berraya | Quantum Aşk",
+    "description": "Evrenin en güzel tesadüfü - Ahmet'in Berraya olan aşkının dijital anıtı",
+    "keywords": "aşk, sevgi, berra, ahmet, romantik, site, özel"
+  },
+  
+  "couple": {
+    "boy": {
+      "name": "Ahmet",
+      "initials": "A",
+      "color": "#FF2E63",
+      "zodiac": "Balık",
+      "birthday": "15 Mart"
+    },
+    "girl": {
+      "name": "Berra",
+      "initials": "B",
+      "color": "#08D9D6",
+      "zodiac": "Akrep",
+      "birthday": "5 Kasım"
+    },
+    "togetherSince": "2023-06-15",
+    "anniversary": "15 Haziran"
+  },
+  
+  "timeline": [
+    {
+      "date": "15 Haziran 2023",
+      "title": "İlk Buluşma",
+      "description": "Kahve kokulu bir öğle sonu, gözlerimizin buluştuğu an",
+      "icon": "☕",
+      "color": "#FF2E63"
+    },
+    {
+      "date": "20 Temmuz 2023",
+      "title": "İlk 'Seni Seviyorum'",
+      "description": "Yıldızların altında, kalbimizden geçen o sihirli kelimeler",
+      "icon": "⭐",
+      "color": "#08D9D6"
+    },
+    {
+      "date": "14 Şubat 2024",
+      "title": "İlk Sevgililer Günü",
+      "description": "Sadece ikimizin olduğu bir dünyada ilk kutlamamız",
+      "icon": "❤️",
+      "color": "#FF9A00"
+    },
+    {
+      "date": "Bugün",
+      "title": "Sonsuz Aşk",
+      "description": "Her gün seni daha çok seviyorum",
+      "icon": "∞",
+      "color": "#FFFFFF"
+    }
+  ],
+  
+  "gallery": [
+    {
+      "type": "memory",
+      "title": "Sahilde İlk Günbatımı",
+      "description": "Kumlar, dalgalar ve sonsuzluğa uzanan ellerimiz",
+      "color": "#FFB6C1",
+      "animation": "float"
+    },
+    {
+      "type": "quote",
+      "title": "Berra Hakkında",
+      "description": "\"Onun gülüşü, karanlıkta parlayan bir fener gibi...\"",
+      "color": "#87CEEB",
+      "animation": "typewriter"
+    },
+    {
+      "type": "promise",
+      "title": "Sonsuz Söz",
+      "description": "Seninle her günü, ilk günkü heyecanla yaşayacağıma sözüm olsun",
+      "color": "#98FB98",
+      "animation": "glow"
+    },
+    {
+      "type": "future",
+      "title": "Hayallerimiz",
+      "description": "Beraberce kuracağımız ev, çocuklarımız, mutlu yarınlar...",
+      "color": "#DDA0DD",
+      "animation": "pulse"
+    }
+  ],
+  
+  "loveLetters": [
+    "Sevgili Berram, sen benim için sadece bir sevgili değil, evrenin bana verdiği en değerli armağansın...",
+    "Gözlerinde kaybolduğum o anlarda, tüm dünyanın sustuğunu hissediyorum...",
+    "Seninle her sabah uyanmak, yeni bir mucizenin başlangıcı gibi...",
+    "Aşkımız, zamana meydan okuyan bir senfoni gibi, her notası mükemmel..."
+  ],
+  
+  "settings": {
+    "autoPlayMusic": true,
+    "defaultVolume": 30,
+    "animationSpeed": "normal",
+    "theme": "dark",
+    "language": "tr"
+  },
+  
+  "secrets": {
+    "easterEggs": [
+      {
+        "trigger": "ahmetberra",
+        "action": "showSpecialMessage",
+        "message": "Seni her şeyden çok seviyorum Berram!"
+      },
+      {
+        "trigger": "sonsuza kadar",
+        "action": "fireworks",
+        "message": "Aşkımız sonsuzluğa kadar sürecek! 🎇"
+      }
+    ],
+    "specialDates": [
+      "2023-06-15",
+      "2024-02-14",
+      "2024-11-05",
+      "2025-03-15"
+    ]
+  }
+}
