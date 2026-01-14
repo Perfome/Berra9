@@ -1,0 +1,311 @@
+/* 🎨 CUSTOM PROPERTIES - Design System */
+:root {
+    /* Color Palette - Vibrant & Modern */
+    --color-primary: #FF2E63;
+    --color-secondary: #08D9D6;
+    --color-dark: #0f0f23;
+    --color-light: #f0f0f0;
+    --color-accent: #FF9A00;
+    
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    
+    /* Fluid Typography */
+    --fluid-min: 16px;
+    --fluid-max: 20px;
+    --fluid-screen-min: 320px;
+    --fluid-screen-max: 3840px;
+    
+    /* Animation Curves */
+    --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-fluid: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* 🔥 RESET - Modern */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(var(--fluid-min), calc(1rem + 0.5vw), var(--fluid-max));
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--color-dark);
+    color: var(--color-light);
+    overflow-x: hidden;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ⚡ QUANTUM LOADER - NASA Style */
+.quantum-loader {
+    position: fixed;
+    inset: 0;
+    background: var(--color-dark);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+    transition: opacity 1s var(--ease-fluid);
+}
+
+.quantum-sphere {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, 
+        var(--color-primary), 
+        var(--color-secondary), 
+        var(--color-accent), 
+        var(--color-primary));
+    animation: quantumSpin 2s linear infinite;
+    position: relative;
+}
+
+.quantum-sphere::after {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    background: var(--color-dark);
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+@keyframes quantumSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* 🌌 COSMIC PARALLAX */
+.cosmic-parallax {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.parallax-layer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.parallax-layer:nth-child(1) {
+    background-image: 
+        radial-gradient(circle at 20% 50%, 
+            rgba(255, 46, 99, 0.1) 0%, 
+            transparent 50%),
+        radial-gradient(circle at 80% 20%, 
+            rgba(8, 217, 214, 0.05) 0%, 
+            transparent 40%);
+}
+
+.parallax-layer:nth-child(2) {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2308D9D6' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    animation: starFloat 100s linear infinite;
+}
+
+@keyframes starFloat {
+    from { transform: translateY(0) rotate(0deg); }
+    to { transform: translateY(-1000px) rotate(360deg); }
+}
+
+/* 🌟 HERO SECTION - Magnetic Effects */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.magnetic-wrapper {
+    text-align: center;
+    cursor: none;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.hero-title .line {
+    display: block;
+    overflow: hidden;
+}
+
+.heart-orb {
+    display: inline-block;
+    animation: heartBeat 2s var(--ease-bounce) infinite;
+    filter: drop-shadow(0 0 20px var(--color-primary));
+}
+
+.infinite-symbol {
+    display: inline-block;
+    margin: 0 2rem;
+    font-size: 1.5em;
+    color: var(--color-secondary);
+    animation: infiniteRotate 4s linear infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes infiniteRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 💧 LIQUID BUTTON - Next Level */
+.liquid-btn {
+    position: relative;
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-light);
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-smooth);
+    isolation: isolate;
+}
+
+.liquid-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+    transition: left 0.6s var(--ease-smooth);
+    z-index: -1;
+}
+
+.liquid-btn:hover::before {
+    left: 100%;
+}
+
+.liquid-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0.5;
+    animation: liquidWave 1.5s linear infinite;
+}
+
+@keyframes liquidWave {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 🎞️ INTERACTIVE GRID - Pinterest Level */
+.interactive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem;
+}
+
+.interactive-card {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    transform-style: preserve-3d;
+    transition: transform 0.6s var(--ease-smooth);
+}
+
+.interactive-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, 
+        rgba(15, 15, 35, 0.9), 
+        transparent);
+    transform: translateY(100%);
+    transition: transform 0.4s var(--ease-smooth);
+}
+
+.interactive-card:hover .card-content {
+    transform: translateY(0);
+}
+
+/* 🌠 CONSTELLATION - Interactive Canvas */
+.constellation-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* 📱 RESPONSIVE DESIGN - Flawless */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(2rem, 8vw, 4rem);
+    }
+    
+    .interactive-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
+
+/* 🔥 PERFORMANCE OPTIMIZATIONS */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 🎯 ACCESSIBILITY */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space:
